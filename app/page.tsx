@@ -40,11 +40,6 @@ export default function Home() {
             description="Dorm-hunting marketplace for Metro Manila."
             tags={['Next.js', 'Tailwind', 'Go']}
           />
-          <ProjectCard
-            title="3D Godot Project"
-            description="Stylized environment with custom shaders."
-            tags={['Godot', 'GDScript', 'GLSL']}
-          />
         </section>
 
         {/* Contact CTA */}
