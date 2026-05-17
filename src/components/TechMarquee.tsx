@@ -20,7 +20,7 @@ export default function TechMarquee() {
       <motion.div
         className="flex gap-12 whitespace-nowrap"
         animate={{
-          x: [0, -1000], // Adjust -1000 based on your content width
+          x: [0, -1000],
         }}
         transition={{
           x: {
@@ -31,7 +31,6 @@ export default function TechMarquee() {
           },
         }}
       >
-        {/* We render the list twice for the infinite loop effect */}
         {[...techStack, ...techStack].map((tech, i) => (
           <span
             key={i}

@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <main className="min-h-screen pt-32 pb-20 px-6">
       <div className="max-w-6xl mx-auto space-y-24">
-        {/* Header Section */}
+        {/* Header */}
         <header className="max-w-4xl space-y-8">
           <div className="space-y-2">
             <h1 className="text-7xl md:text-8xl font-black tracking-tighter leading-[0.85] uppercase">
@@ -31,18 +31,46 @@ export default function Home() {
           </div>
         </header>
 
-        <TechMarquee />
-
-        {/* Project Grid */}
-        <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <ProjectCard
-            title="Kasa"
-            description="Dorm-hunting marketplace for Metro Manila."
-            tags={['Next.js', 'Tailwind', 'Go']}
-          />
+        {/* About */}
+        <section id="about" className="scroll-mt-24 max-w-3xl">
+          <h2 className="text-4xl font-black mb-8 tracking-tight">About Me</h2>
+          <div className="space-y-6 text-lg text-spotify-gray leading-relaxed">
+            <p>
+              I&apos;m a frontend specialist who loves building products that
+              feel as good as they look. With a strong foundation in full-stack
+              development, I bring technical depth to every project.
+            </p>
+            <p>
+              Currently focused on creating delightful user experiences with
+              modern web technologies, always keeping performance and
+              accessibility at the forefront.
+            </p>
+          </div>
         </section>
 
-        {/* Contact CTA */}
+        {/* Skills */}
+        <section id="skills" className="scroll-mt-24">
+          <h2 className="text-4xl font-black mb-12 tracking-tight">
+            Skills & Tech Stack
+          </h2>
+          <TechMarquee />
+        </section>
+
+        {/* Work */}
+        <section id="work" className="scroll-mt-24">
+          <h2 className="text-4xl font-black mb-12 tracking-tight">
+            Featured Work
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <ProjectCard
+              title="Kasa"
+              description="Dorm-hunting marketplace for Metro Manila."
+              tags={['Next.js', 'Tailwind', 'Go']}
+            />
+          </div>
+        </section>
+
+        {/* Contact */}
         <section className="bg-spotify-green rounded-[3rem] p-16 text-black flex flex-col md:flex-row items-center justify-between gap-10">
           <h2 className="text-5xl font-black leading-tight">
             Ready to ship <br /> your next idea?
