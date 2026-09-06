@@ -1,17 +1,25 @@
 'use client';
 import { motion } from 'framer-motion';
-import { Code, ExternalLink } from 'lucide-react'; // Swapping Github for Code
+import { Code, ExternalLink, GitBranch, Server } from 'lucide-react';
 
 interface ProjectProps {
   title: string;
   tags: string[];
   description: string;
+  status?: string;
+  repositoryUrl?: string;
+  apiRepositoryUrl?: string;
+  liveUrl?: string;
 }
 
 export default function ProjectCard({
   title,
   tags,
   description,
+  status,
+  repositoryUrl,
+  apiRepositoryUrl,
+  liveUrl,
 }: ProjectProps) {
   return (
     <motion.div
@@ -27,15 +35,54 @@ export default function ProjectCard({
             />
           </div>
           <div className="flex gap-4 text-spotify-gray">
-            <ExternalLink
-              size={20}
-              className="hover:text-white cursor-pointer transition-colors"
-            />
+            {repositoryUrl ? (
+              <a
+                href={repositoryUrl}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={`${title} source code on GitHub`}
+                title="View source code"
+                className="transition-colors hover:text-white"
+              >
+                <GitBranch size={20} />
+              </a>
+            ) : null}
+            {apiRepositoryUrl ? (
+              <a
+                href={apiRepositoryUrl}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={`${title} API source code on GitHub`}
+                title="View API source code"
+                className="transition-colors hover:text-white"
+              >
+                <Server size={20} />
+              </a>
+            ) : null}
+            {liveUrl ? (
+              <a
+                href={liveUrl}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={`Open the ${title} live app`}
+                title="Open live app"
+                className="transition-colors hover:text-white"
+              >
+                <ExternalLink size={20} />
+              </a>
+            ) : null}
           </div>
         </div>
 
         <div>
-          <h3 className="text-2xl font-bold text-white mb-2">{title}</h3>
+          <div className="mb-2 flex flex-wrap items-center gap-3">
+            <h3 className="text-2xl font-bold text-white">{title}</h3>
+            {status ? (
+              <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.15em] text-spotify-gray">
+                {status}
+              </span>
+            ) : null}
+          </div>
           <p className="text-spotify-gray text-sm leading-relaxed">
             {description}
           </p>

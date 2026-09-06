@@ -65,7 +65,19 @@ export default function Home() {
             <ProjectCard
               title="Kasa"
               description="Dorm-hunting marketplace for Metro Manila."
-              tags={['Next.js', 'Tailwind', 'Go']}
+              tags={['Vite', 'Laravel', 'PostgreSQL']}
+              status="Work in progress"
+              repositoryUrl="https://github.com/jeffrex13/kasa"
+              liveUrl="https://find-kasa-app.netlify.app/"
+            />
+            <ProjectCard
+              title="Student ID Validation"
+              description="Student access validation system with ID scanning, QR codes, and clearance-based entry statuses."
+              tags={['Next.js', 'TypeScript', 'Express', 'MongoDB']}
+              status="Commissioned work"
+              repositoryUrl="https://github.com/jeffrex13/student-id-validation"
+              apiRepositoryUrl="https://github.com/jeffrex13/student-id-validation-api"
+              liveUrl="https://student-id-validation.vercel.app/"
             />
           </div>
         </section>
