@@ -7,6 +7,7 @@ interface ProjectProps {
   tags: string[];
   description: string;
   status?: string;
+  compactTitle?: boolean;
   repositoryUrl?: string;
   apiRepositoryUrl?: string;
   liveUrl?: string;
@@ -17,6 +18,7 @@ export default function ProjectCard({
   tags,
   description,
   status,
+  compactTitle = false,
   repositoryUrl,
   apiRepositoryUrl,
   liveUrl,
@@ -24,7 +26,7 @@ export default function ProjectCard({
   return (
     <motion.div
       whileHover={{ y: -8 }}
-      className="group relative bg-spotify-dark border border-white/5 p-8 rounded-[2.5rem] transition-all hover:border-spotify-green/40 hover:bg-spotify-light/30"
+      className="group relative h-full bg-spotify-dark border border-white/5 p-8 rounded-[2.5rem] transition-all hover:border-spotify-green/40 hover:bg-spotify-light/30"
     >
       <div className="space-y-5">
         <div className="flex justify-between items-start">
@@ -76,7 +78,11 @@ export default function ProjectCard({
 
         <div>
           <div className="mb-2 flex flex-wrap items-center gap-3">
-            <h3 className="text-2xl font-bold text-white">{title}</h3>
+            <h3
+              className={`${compactTitle ? 'text-xl' : 'text-2xl'} font-bold text-white`}
+            >
+              {title}
+            </h3>
             {status ? (
               <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.15em] text-spotify-gray">
                 {status}

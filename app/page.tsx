@@ -1,4 +1,4 @@
-import ProjectCard from '@/src/components/ProjectCard';
+import FeaturedWork from '@/src/components/FeaturedWork';
 import TechMarquee from '@/src/components/TechMarquee';
 
 export default function Home() {
@@ -58,28 +58,7 @@ export default function Home() {
 
         {/* Work */}
         <section id="work" className="scroll-mt-24">
-          <h2 className="text-4xl font-black mb-12 tracking-tight">
-            Featured Work
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <ProjectCard
-              title="Kasa"
-              description="Dorm-hunting marketplace for Metro Manila."
-              tags={['Vite', 'Laravel', 'PostgreSQL']}
-              status="Work in progress"
-              repositoryUrl="https://github.com/jeffrex13/kasa"
-              liveUrl="https://find-kasa-app.netlify.app/"
-            />
-            <ProjectCard
-              title="Student ID Validation"
-              description="Student access validation system with ID scanning, QR codes, and clearance-based entry statuses."
-              tags={['Next.js', 'TypeScript', 'Express', 'MongoDB']}
-              status="Commissioned work"
-              repositoryUrl="https://github.com/jeffrex13/student-id-validation"
-              apiRepositoryUrl="https://github.com/jeffrex13/student-id-validation-api"
-              liveUrl="https://student-id-validation.vercel.app/"
-            />
-          </div>
+          <FeaturedWork />
         </section>
 
         {/* Contact */}

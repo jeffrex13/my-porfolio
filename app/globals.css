@@ -15,15 +15,41 @@
 /* Optional: Smooth out the scrollbar like the real Spotify app */
 @layer base {
   ::-webkit-scrollbar {
-    width: 12px;
+    width: 8px;
+    height: 8px;
   }
   ::-webkit-scrollbar-track {
     background: transparent;
   }
   ::-webkit-scrollbar-thumb {
-    background-color: #3e3e3e;
-    border-radius: 20px;
-    border: 3px solid transparent;
+    background-color: #1db954;
+    border-radius: 999px;
+    border: 2px solid #121212;
     background-clip: content-box;
   }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #1ed760;
+  }
+
+  html {
+    scrollbar-color: #1db954 transparent;
+    scrollbar-width: thin;
+  }
+}
+
+.featured-work-track {
+  scrollbar-color: #1db954 transparent;
+  scrollbar-width: thin;
+}
+
+.featured-work-track::-webkit-scrollbar {
+  display: block;
+  height: 6px;
+}
+
+.featured-work-track::-webkit-scrollbar-thumb {
+  background-color: #1db954;
+  border: 1px solid #121212;
+  border-radius: 999px;
 }
