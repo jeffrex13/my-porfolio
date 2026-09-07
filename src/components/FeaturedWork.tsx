@@ -93,7 +93,9 @@ export default function FeaturedWork() {
   return (
     <>
       <div className="relative min-h-10">
-        <h2 className="pr-24 text-3xl font-black tracking-tight md:text-4xl">Featured Work</h2>
+        <h2 className="pr-20 text-2xl font-black sm:text-3xl md:pr-24 md:text-4xl">
+          Featured Work
+        </h2>
         <div className="absolute right-0 top-0 flex gap-2">
           <button
             type="button"
@@ -101,7 +103,7 @@ export default function FeaturedWork() {
             disabled={activeIndex === 0}
             aria-label="Show previous projects"
             title="Previous projects"
-            className="grid size-9 place-items-center md:size-10 rounded-full border border-white/10 text-spotify-gray transition-colors hover:border-spotify-green/50 hover:text-white disabled:cursor-not-allowed disabled:opacity-30"
+            className="grid size-10 place-items-center rounded-full border border-white/10 text-spotify-gray transition-colors hover:border-spotify-green/50 hover:text-white disabled:cursor-not-allowed disabled:opacity-30"
           >
             <ChevronLeft size={20} />
           </button>
@@ -111,7 +113,7 @@ export default function FeaturedWork() {
             disabled={activeIndex >= lastIndex}
             aria-label="Show more projects"
             title="More projects"
-            className="grid size-9 place-items-center md:size-10 rounded-full border border-white/10 text-spotify-gray transition-colors hover:border-spotify-green/50 hover:text-white disabled:cursor-not-allowed disabled:opacity-30"
+            className="grid size-10 place-items-center rounded-full border border-white/10 text-spotify-gray transition-colors hover:border-spotify-green/50 hover:text-white disabled:cursor-not-allowed disabled:opacity-30"
           >
             <ChevronRight size={20} />
           </button>
@@ -121,12 +123,12 @@ export default function FeaturedWork() {
       <div
         ref={trackRef}
         onScroll={updateActiveIndex}
-        className="featured-work-track mt-7 flex snap-x snap-mandatory gap-8 overflow-x-auto overscroll-x-contain py-3"
+        className="featured-work-track mt-5 flex snap-x snap-mandatory gap-4 overflow-x-auto overscroll-x-contain py-3 md:mt-7 md:gap-8"
       >
         {projects.map((project) => (
           <div
             key={project.title}
-            className="min-w-0 w-[85%] flex-none snap-start md:w-[calc((100%-2rem)/2)]"
+            className="w-[88%] min-w-0 flex-none snap-start sm:w-[80%] md:w-[calc((100%-2rem)/2)]"
           >
             <ProjectCard {...project} />
           </div>
@@ -144,7 +146,7 @@ export default function FeaturedWork() {
             onClick={() => scrollToIndex(index)}
             aria-label={`Show project page ${index + 1}`}
             aria-current={activeIndex === index ? 'true' : undefined}
-            className="grid h-6 w-8 place-items-center"
+            className="grid size-10 place-items-center"
           >
             <span
               className={`h-1.5 w-6 rounded-full transition-colors ${

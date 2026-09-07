@@ -14,11 +14,11 @@ const techStack = [
 
 export default function TechMarquee() {
   return (
-    <section className="py-12 border-y border-white/5 overflow-hidden">
-      <div className="absolute inset-y-0 left-0 w-20 bg-linear-to-r from-black to-transparent z-10" />
-      <div className="absolute inset-y-0 right-0 w-20 bg-linear-to-l from-black to-transparent z-10" />
+    <section className="relative overflow-hidden border-y border-white/5 py-8 md:py-12">
+      <div className="absolute inset-y-0 left-0 z-10 w-10 bg-linear-to-r from-black to-transparent md:w-20" />
+      <div className="absolute inset-y-0 right-0 z-10 w-10 bg-linear-to-l from-black to-transparent md:w-20" />
       <motion.div
-        className="flex gap-12 whitespace-nowrap"
+        className="flex gap-8 whitespace-nowrap md:gap-12"
         animate={{
           x: [0, -1000],
         }}
@@ -34,7 +34,7 @@ export default function TechMarquee() {
         {[...techStack, ...techStack].map((tech, i) => (
           <span
             key={i}
-            className="text-5xl font-black text-white/10 hover:text-spotify-green transition-colors cursor-default uppercase"
+            className="cursor-default text-3xl font-black uppercase text-white/10 transition-colors hover:text-spotify-green md:text-5xl"
           >
             {tech}
           </span>

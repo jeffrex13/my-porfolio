@@ -26,9 +26,9 @@ export default function ProjectCard({
   return (
     <motion.div
       whileHover={{ y: -8 }}
-      className="group relative h-full bg-spotify-dark border border-white/5 p-8 rounded-[2.5rem] transition-all hover:border-spotify-green/40 hover:bg-spotify-light/30"
+      className="group relative h-full rounded-[2rem] border border-white/5 bg-spotify-dark p-6 transition-all hover:border-spotify-green/40 hover:bg-spotify-light/30 md:rounded-[2.5rem] md:p-8"
     >
-      <div className="space-y-5">
+      <div className="min-w-0 space-y-5">
         <div className="flex justify-between items-start">
           <div className="p-3 bg-white/5 rounded-2xl group-hover:bg-spotify-green/10 transition-colors">
             <Code
@@ -36,7 +36,7 @@ export default function ProjectCard({
               className="text-spotify-gray group-hover:text-spotify-green"
             />
           </div>
-          <div className="flex gap-4 text-spotify-gray">
+          <div className="flex gap-1 text-spotify-gray">
             {repositoryUrl ? (
               <a
                 href={repositoryUrl}
@@ -44,7 +44,7 @@ export default function ProjectCard({
                 rel="noreferrer"
                 aria-label={`${title} source code on GitHub`}
                 title="View source code"
-                className="transition-colors hover:text-white"
+                className="grid size-10 place-items-center transition-colors hover:text-white"
               >
                 <GitBranch size={20} />
               </a>
@@ -56,7 +56,7 @@ export default function ProjectCard({
                 rel="noreferrer"
                 aria-label={`${title} API source code on GitHub`}
                 title="View API source code"
-                className="transition-colors hover:text-white"
+                className="grid size-10 place-items-center transition-colors hover:text-white"
               >
                 <Server size={20} />
               </a>
@@ -68,7 +68,7 @@ export default function ProjectCard({
                 rel="noreferrer"
                 aria-label={`Open the ${title} live app`}
                 title="Open live app"
-                className="transition-colors hover:text-white"
+                className="grid size-10 place-items-center transition-colors hover:text-white"
               >
                 <ExternalLink size={20} />
               </a>
@@ -89,7 +89,7 @@ export default function ProjectCard({
               </span>
             ) : null}
           </div>
-          <p className="text-spotify-gray text-sm leading-relaxed">
+          <p className="text-sm leading-relaxed text-spotify-gray [overflow-wrap:anywhere]">
             {description}
           </p>
         </div>
