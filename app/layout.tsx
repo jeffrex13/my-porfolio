@@ -1,7 +1,16 @@
 import './globals.css';
 import { Inter } from 'next/font/google';
+import type { Metadata } from 'next';
 
 const inter = Inter({ subsets: ['latin'] });
+
+export const metadata: Metadata = {
+  title: 'Jeffrey | Frontend Developer',
+  description:
+    'Frontend developer portfolio featuring user-focused interfaces and full-stack web projects.',
+  applicationName: "Jeffrey's Portfolio",
+  creator: 'Jeffrey',
+};
 
 export default function RootLayout({
   children,

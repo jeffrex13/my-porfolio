@@ -8,7 +8,7 @@ const projects = [
   {
     title: 'Student Access Management',
     description:
-      'Built a BioStar 2-integrated frontend for real-time ID scans, access statuses, and reporting.',
+      'Built a school gate-access frontend using the BioStar 2 API and WebSockets for live ID scans, access statuses, and reporting.',
     tags: [
       'Next.js',
       'TypeScript',

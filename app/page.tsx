@@ -62,12 +62,15 @@ export default function Home() {
         </section>
 
         {/* Contact */}
-        <section className="bg-spotify-green rounded-[3rem] p-16 text-black flex flex-col md:flex-row items-center justify-between gap-10">
+        <section
+          id="contact"
+          className="scroll-mt-24 bg-spotify-green rounded-[3rem] p-16 text-black flex flex-col md:flex-row items-center justify-between gap-10"
+        >
           <h2 className="text-5xl font-black leading-tight">
             Ready to ship <br /> your next idea?
           </h2>
           <a
-            href="mailto:hello@example.com"
+            href="mailto:jepcureg@gmail.com"
             className="bg-black text-white px-12 py-6 rounded-full font-bold text-xl hover:scale-105 transition-transform active:scale-95 shadow-2xl"
           >
             Let&apos;s Talk
